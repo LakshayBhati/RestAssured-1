@@ -68,7 +68,8 @@ public class ECommerceUsers {
 		String jsonresponse = response.asString();
 		JsonPath js = new JsonPath(jsonresponse);
 		Token = js.get("accessToken");
-		System.out.println("Token is "+Token);		
+		System.out.println("Token is "+Token);
+		System.out.println("Anything");
 	}
 	
 	@Test (priority = 2)
@@ -87,9 +88,9 @@ public class ECommerceUsers {
 				.extract().response();
 		
 		String jsonresponse = response.asString();
-		//JsonPath js = new JsonPath(jsonresponse);
-		
-		System.out.println(jsonresponse);
+		JsonPath js = new JsonPath(jsonresponse);
+		id = js.getString("user[50]._id");
+		System.out.println("ID is "+id);
 	}
 	
 	@Test (enabled = false)
