@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9963" started-at="2022-03-16T14:18:11 IST" finished-at="2022-03-16T14:18:21 IST">
+  <suite name="Default suite" duration-ms="9463" started-at="2022-03-16T17:16:51 IST" finished-at="2022-03-16T17:17:01 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9963" started-at="2022-03-16T14:18:11 IST" finished-at="2022-03-16T14:18:21 IST">
+    <test name="Default test" duration-ms="9463" started-at="2022-03-16T17:16:51 IST" finished-at="2022-03-16T17:17:01 IST">
       <class name="RestTesting.ECommerceUsers">
-        <test-method status="PASS" signature="login()[pri:1, instance:RestTesting.ECommerceUsers@33c7e1bb]" name="login" duration-ms="7225" started-at="2022-03-16T14:18:11 IST" finished-at="2022-03-16T14:18:18 IST">
+        <test-method status="PASS" signature="login()[pri:1, instance:RestTesting.ECommerceUsers@33c7e1bb]" name="login" duration-ms="6564" started-at="2022-03-16T17:16:51 IST" finished-at="2022-03-16T17:16:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="getallusers()[pri:2, instance:RestTesting.ECommerceUsers@33c7e1bb]" name="getallusers" duration-ms="2688" started-at="2022-03-16T14:18:18 IST" finished-at="2022-03-16T14:18:21 IST">
+        <test-method status="PASS" signature="getallusers()[pri:2, instance:RestTesting.ECommerceUsers@33c7e1bb]" name="getallusers" duration-ms="2856" started-at="2022-03-16T17:16:58 IST" finished-at="2022-03-16T17:17:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getallusers -->
