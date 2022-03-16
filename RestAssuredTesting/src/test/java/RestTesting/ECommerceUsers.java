@@ -13,6 +13,7 @@ public class ECommerceUsers {
 	public static String message;
 	public static String Token;
 	public static String id;
+	public static String emailid;
 	
 	@Test (priority = 0, enabled = false)
 	public void signup()
@@ -69,7 +70,7 @@ public class ECommerceUsers {
 		JsonPath js = new JsonPath(jsonresponse);
 		Token = js.get("accessToken");
 		System.out.println("Token is "+Token);
-		System.out.println("Anything");
+		//System.out.println("Anything");
 	}
 	
 	@Test (priority = 2)
@@ -89,11 +90,13 @@ public class ECommerceUsers {
 		
 		String jsonresponse = response.asString();
 		JsonPath js = new JsonPath(jsonresponse);
-		id = js.getString("user[50]._id");
-		System.out.println("ID is "+id);
+		id = js.get("users[50]._id");
+		System.out.println("The Users ID is "+id);
+		emailid = js.get("users[50].email");
+		System.out.println("The Users Email ID is "+emailid);
 	}
 	
-	@Test (enabled = false)
+	@Test (priority = 3)
 	public void delete()
 	{
 		RestAssured.baseURI = baseurl;
@@ -108,8 +111,7 @@ public class ECommerceUsers {
 				.assertThat().statusCode(200).contentType(ContentType.JSON)
 				.extract().response();
 				
-		String jsonresponse = response.asString();
-		System.out.println(jsonresponse);
+		System.out.println("The User is Deleted");
 	}
 	
 }
